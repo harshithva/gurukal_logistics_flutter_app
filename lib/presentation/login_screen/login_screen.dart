@@ -17,7 +17,7 @@ class LoginScreen extends GetWidget<LoginController> {
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Align(
@@ -73,21 +73,177 @@ class LoginScreen extends GetWidget<LoginController> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: getVerticalSize(
-                        22.00,
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        top: getVerticalSize(
+                          22.00,
+                        ),
+                      ),
+                      child: Text(
+                        "msg_login_track_all".tr,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
+                        style: AppStyle.textstylesoraregular15.copyWith(
+                          fontSize: getFontSize(
+                            15,
+                          ),
+                          height: 1.47,
+                        ),
                       ),
                     ),
-                    child: Text(
-                      "msg_login_track_all".tr,
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.center,
-                      style: AppStyle.textstylesoraregular15.copyWith(
-                        fontSize: getFontSize(
-                          15,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: getHorizontalSize(
+                        28.00,
+                      ),
+                      top: getVerticalSize(
+                        50.00,
+                      ),
+                      right: getHorizontalSize(
+                        28.00,
+                      ),
+                    ),
+                    child: Container(
+                      height: getVerticalSize(
+                        60.00,
+                      ),
+                      width: getHorizontalSize(
+                        319.00,
+                      ),
+                      child: TextFormField(
+                        controller: controller.inputController,
+                        decoration: InputDecoration(
+                          hintText: "lbl_email".tr,
+                          hintStyle:
+                              AppStyle.textstylepoppinsregular16.copyWith(
+                            fontSize: getFontSize(
+                              16.0,
+                            ),
+                            color: ColorConstant.black900,
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(
+                              getHorizontalSize(
+                                32.00,
+                              ),
+                            ),
+                            borderSide: BorderSide(
+                              color: ColorConstant.gray400,
+                              width: 1,
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(
+                              getHorizontalSize(
+                                32.00,
+                              ),
+                            ),
+                            borderSide: BorderSide(
+                              color: ColorConstant.gray400,
+                              width: 1,
+                            ),
+                          ),
+                          isDense: true,
+                          contentPadding: EdgeInsets.only(
+                            left: getHorizontalSize(
+                              20.00,
+                            ),
+                            top: getVerticalSize(
+                              19.38,
+                            ),
+                            bottom: getVerticalSize(
+                              19.38,
+                            ),
+                          ),
                         ),
-                        height: 1.47,
+                        style: TextStyle(
+                          color: ColorConstant.black900,
+                          fontSize: getFontSize(
+                            16.0,
+                          ),
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: getHorizontalSize(
+                        28.00,
+                      ),
+                      top: getVerticalSize(
+                        29.00,
+                      ),
+                      right: getHorizontalSize(
+                        28.00,
+                      ),
+                    ),
+                    child: Container(
+                      height: getVerticalSize(
+                        60.00,
+                      ),
+                      width: getHorizontalSize(
+                        319.00,
+                      ),
+                      child: TextFormField(
+                        controller: controller.inputActiveController,
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          hintText: "lbl_password".tr,
+                          hintStyle:
+                              AppStyle.textstylepoppinsregular16.copyWith(
+                            fontSize: getFontSize(
+                              16.0,
+                            ),
+                            color: ColorConstant.black900,
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(
+                              getHorizontalSize(
+                                32.00,
+                              ),
+                            ),
+                            borderSide: BorderSide(
+                              color: ColorConstant.gray400,
+                              width: 1,
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(
+                              getHorizontalSize(
+                                32.00,
+                              ),
+                            ),
+                            borderSide: BorderSide(
+                              color: ColorConstant.gray400,
+                              width: 1,
+                            ),
+                          ),
+                          isDense: true,
+                          contentPadding: EdgeInsets.only(
+                            left: getHorizontalSize(
+                              20.00,
+                            ),
+                            top: getVerticalSize(
+                              19.38,
+                            ),
+                            bottom: getVerticalSize(
+                              19.38,
+                            ),
+                          ),
+                        ),
+                        style: TextStyle(
+                          color: ColorConstant.black900,
+                          fontSize: getFontSize(
+                            16.0,
+                          ),
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                   ),
@@ -99,7 +255,7 @@ class LoginScreen extends GetWidget<LoginController> {
                           19.00,
                         ),
                         top: getVerticalSize(
-                          243.00,
+                          44.00,
                         ),
                         right: getHorizontalSize(
                           19.00,

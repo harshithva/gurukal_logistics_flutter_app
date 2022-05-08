@@ -44,4 +44,13 @@ class AppStyle {
     ),
     fontWeight: FontWeight.w400,
   );
+
+  static TextStyle textstylepoppinsregular16 = TextStyle(
+    color: ColorConstant.black900,
+    fontSize: getFontSize(
+      16,
+    ),
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w400,
+  );
 }
