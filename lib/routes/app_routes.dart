@@ -1,15 +1,11 @@
-import 'package:gurukal/presentation/onboarding_screen/onboarding_screen.dart';
-import 'package:gurukal/presentation/onboarding_screen/binding/onboarding_binding.dart';
-import 'package:gurukal/presentation/login_screen/login_screen.dart';
-import 'package:gurukal/presentation/login_screen/binding/login_binding.dart';
+import 'package:gurukal/presentation/home_screen/home_screen.dart';
+import 'package:gurukal/presentation/home_screen/binding/home_binding.dart';
 import 'package:gurukal/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:gurukal/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
-  static String onboardingScreen = '/onboarding_screen';
-
-  static String loginScreen = '/login_screen';
+  static String homeScreen = '/home_screen';
 
   static String appNavigationScreen = '/app_navigation_screen';
 
@@ -17,17 +13,10 @@ class AppRoutes {
 
   static List<GetPage> pages = [
     GetPage(
-      name: onboardingScreen,
-      page: () => OnboardingScreen(),
+      name: homeScreen,
+      page: () => HomeScreen(),
       bindings: [
-        OnboardingBinding(),
-      ],
-    ),
-    GetPage(
-      name: loginScreen,
-      page: () => LoginScreen(),
-      bindings: [
-        LoginBinding(),
+        HomeBinding(),
       ],
     ),
     GetPage(
@@ -39,9 +28,9 @@ class AppRoutes {
     ),
     GetPage(
       name: initialRoute,
-      page: () => OnboardingScreen(),
+      page: () => HomeScreen(),
       bindings: [
-        OnboardingBinding(),
+        HomeBinding(),
       ],
     )
   ];

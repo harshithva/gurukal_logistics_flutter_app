@@ -18,6 +18,27 @@ class ApiClient extends GetConnect {
     }
   }
 
+  Future fetch303(
+      {Function(dynamic data)? onSuccess,
+      Function(dynamic error)? onError}) async {
+    ProgressDialogUtils.showProgressDialog();
+    try {
+      await isNetworkConnected();
+      Response response = await httpClient.get('/api/customers/303');
+      ProgressDialogUtils.hideProgressDialog();
+      if (response.statusCode == 200) {
+        onSuccess!(response.body);
+      } else {
+        onError!(
+          response.hasError ? response.statusText : 'Something Went Wrong!',
+        );
+      }
+    } catch (error) {
+      ProgressDialogUtils.hideProgressDialog();
+      onError!(error);
+    }
+  }
+
   Future createLogin(
       {Function(dynamic data)? onSuccess,
       Function(dynamic error)? onError,

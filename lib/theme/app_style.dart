@@ -2,15 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gurukal/core/app_export.dart';
 
 class AppStyle {
-  static TextStyle textstylesoraregular15 = TextStyle(
-    color: ColorConstant.black900,
-    fontSize: getFontSize(
-      15,
-    ),
-    fontFamily: 'Sora',
-    fontWeight: FontWeight.w400,
-  );
-
   static TextStyle textstyleregular20 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(
@@ -19,38 +10,40 @@ class AppStyle {
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle textstylesorabold34 = TextStyle(
-    color: ColorConstant.black900,
-    fontSize: getFontSize(
-      34,
-    ),
-    fontFamily: 'Sora',
-    fontWeight: FontWeight.w700,
+  static TextStyle textstylesoraregular111 = textstylesoraregular11.copyWith(
+    color: ColorConstant.bluegray400,
   );
 
-  static TextStyle textstylesorasemibold17 = TextStyle(
-    color: ColorConstant.whiteA700,
+  static TextStyle textstylespacegrotesksemibold18 =
+      textstylespacegrotesksemibold16.copyWith(
     fontSize: getFontSize(
-      17,
+      18,
     ),
-    fontFamily: 'Sora',
-    fontWeight: FontWeight.w600,
   );
 
   static TextStyle textstyleregular16 = TextStyle(
-    color: ColorConstant.bluegray400,
+    color: ColorConstant.bluegray401,
     fontSize: getFontSize(
       16,
     ),
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle textstylepoppinsregular16 = TextStyle(
-    color: ColorConstant.black900,
+  static TextStyle textstylespacegrotesksemibold16 = TextStyle(
+    color: ColorConstant.bluegray800,
     fontSize: getFontSize(
       16,
     ),
-    fontFamily: 'Poppins',
+    fontFamily: 'Space Grotesk',
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle textstylesoraregular11 = TextStyle(
+    color: ColorConstant.indigo500,
+    fontSize: getFontSize(
+      11,
+    ),
+    fontFamily: 'Sora',
     fontWeight: FontWeight.w400,
   );
 }
